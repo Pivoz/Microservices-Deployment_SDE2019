@@ -39,7 +39,7 @@ app.post("/compute", async function(req, res) {
 
     let result = computeResult(op1,op2,sign);
     if (result == undefined){
-        res.status(400).json({message: "Division by zero"});
+        res.status(400).json({message: "Division by zero or sign not supported"});
         return;
     }
     

@@ -1,4 +1,3 @@
-
 #!/bin/sh
 
 cd Adapter_n2w

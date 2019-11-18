@@ -1,0 +1,252 @@
+{
+	"info": {
+		"_postman_id": "0c44e463-8893-4082-8368-9282620d7338",
+		"name": "LAB 4 requests",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Multilanguage hello world example",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "17164147-a3ed-447b-bfed-d3348be299c5",
+						"exec": [
+							"const NREQ = 3;",
+							"",
+							"function send(){",
+							"    for (var i=0; i<NREQ; i++){",
+							"        postman.setNextRequest(\"FirstExample\");",
+							"        sleep(1000);",
+							"    }",
+							"    ",
+							"    postman.setNextRequest(null);",
+							"}",
+							"",
+							"function sleep(delay) {",
+							"    var start = new Date().getTime();",
+							"    while (new Date().getTime() < start + delay);",
+							"}",
+							"",
+							"send();"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000"
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Raw n2w",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://grizzlyst.com:8081/number?number=152&locale=en",
+					"protocol": "http",
+					"host": [
+						"grizzlyst",
+						"com"
+					],
+					"port": "8081",
+					"path": [
+						"number"
+					],
+					"query": [
+						{
+							"key": "number",
+							"value": "152"
+						},
+						{
+							"key": "locale",
+							"value": "en"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Adapter request",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/n2wadapter?number=116&locale=it",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"n2wadapter"
+					],
+					"query": [
+						{
+							"key": "number",
+							"value": "116"
+						},
+						{
+							"key": "locale",
+							"value": "it"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Decimal n2w request",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3001/n2w?number=116.12&locale=it",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"n2w"
+					],
+					"query": [
+						{
+							"key": "number",
+							"value": "116.12"
+						},
+						{
+							"key": "locale",
+							"value": "it"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Monitoring1 requests",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "fa0520ba-903d-44d9-8b6a-3461e08be8af",
+						"exec": [
+							"const NREQ = 3;",
+							"",
+							"function send(){",
+							"    for (var i=0; i<NREQ; i++){",
+							"        postman.setNextRequest(\"Monitoring1 requests\");",
+							"        sleep(1000);",
+							"    }",
+							"    ",
+							"    postman.setNextRequest(null);",
+							"}",
+							"",
+							"function sleep(delay) {",
+							"    var start = new Date().getTime();",
+							"    while (new Date().getTime() < start + delay);",
+							"}",
+							"",
+							"send();"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080"
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Monitoring2 requests",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "1a8b09bb-3684-49c2-9604-4cb2b116f9fb",
+						"exec": [
+							"const NREQ = 3;",
+							"",
+							"function send(){",
+							"    for (var i=0; i<NREQ; i++){",
+							"        postman.setNextRequest(\"Monitoring2 requests\");",
+							"        sleep(1000);",
+							"    }",
+							"    ",
+							"    postman.setNextRequest(null);",
+							"}",
+							"",
+							"function sleep(delay) {",
+							"    var start = new Date().getTime();",
+							"    while (new Date().getTime() < start + delay);",
+							"}",
+							"",
+							"send();"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/name",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"name"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
